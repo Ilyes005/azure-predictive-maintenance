@@ -10,7 +10,9 @@ from sklearn.metrics import (
 )
 
 # Load dataset retrieved from Azure Blob Storage
-df = pd.read_csv("/tmp/ai4i2020.csv")
+df = pd.read_csv(
+    "https://archive.ics.uci.edu/ml/machine-learning-databases/00601/ai4i2020.csv"
+)
 
 # Select predictors (avoid target leakage)
 features = [
